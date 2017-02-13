@@ -46,20 +46,20 @@ abstract class controller{
     }
     public function getMethod(){
 
-            return $this->getServer('REQUEST_METHOD');
+            return $_SERVER['REQUEST_METHOD'];
 
     }
     public function isPost(){
-      return  $this->getMethod()=='post'?true:false;
+      return  $this->getMethod()=='POST'?true:false;
     }
     public function isGet(){
-      return  $this->getMethod()=='get'?true:false;
+      return  $this->getMethod()=='GET'?true:false;
     }
     public function isDelete(){
-      return  $this->getMethod()=='delete'?true:false;
+      return  $this->getMethod()=='DELETE'?true:false;
     }
     public function isPut(){
-      return  $this->getMethod()=='put'?true:false;
+      return  $this->getMethod()=='PUT'?true:false;
     }
     public function post($value=null){
         if($value){
