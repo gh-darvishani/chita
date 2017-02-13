@@ -1,0 +1,28 @@
+*{
+    direction: rtl;
+}
+#start{
+    width: 60%;
+    margin: auto;
+    min-height:200px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin-top: 15%;
+    text-align: left;
+    padding: 5px;
+    background-color: #c7ddef;
+}
+#code{
+    width: 60%;
+    margin: auto;
+    min-height:200px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin-top: 15%;
+    text-align: left;
+    padding: 5px;
+
+}
+input{
+    text-align: left;
+}

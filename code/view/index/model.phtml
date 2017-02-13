@@ -1,0 +1,31 @@
+<?php
+import::plugin('html','form');
+import::lib('url');
+?>
+
+<div id="code">
+
+    <?php
+    $form=new html();
+   echo $form->startForm(app::url()->currentUrl());
+    echo $form->addLabelFor('','model name',['class'=>'btn btn-info']);
+    echo $form->addInput('text','model','',['class'=>'form form-control']);
+    echo $form->addLabelFor('','module name',['class'=>'btn btn-info']);
+    echo $form->addInput('text','module','',['class'=>'form form-control']);
+
+    echo    $form->addLabelFor('','table name',['class'=>'btn btn-info']);
+    echo $form->addInput('text','table','',['class'=>'form form-control']);
+    echo $form->addInput('hidden','csrf',app::csrf()->create());
+
+    echo $form->addEmptyTag('hr');
+    echo $form->addInput('submit','','create model',['class'=>'btn btn-success']);
+
+
+    echo $form->endForm();
+
+
+
+
+
+    ?>
+</div>

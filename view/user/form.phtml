@@ -1,0 +1,17 @@
+<?php
+ import::plugin('html','form');
+import::lib('url');
+$form=new html();
+
+$form->uploadForm(url::currentUrl());
+
+$form->label(['class'=>'btn btn-info','value'=>'username']);
+$form->text(['name'=>'username','class'=>'form form-control']);
+$form->label(['class'=>'btn btn-info','value'=>'password']);
+$form->password(['name'=>'password','class'=>'form form-control']);
+
+$form->submit(['value'=>'login','class'=>'btn btn-danger']);
+
+
+$form->display();
+$form->endForm();

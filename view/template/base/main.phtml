@@ -1,0 +1,44 @@
+<?php
+
+import::lib('url');
+import::lib('view');
+?>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="<?php echo import::skin('bootstrap.min.css','css')?>" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo import::skin('home.css','css')?>">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="<?php echo  import::skin('bootstrap-theme.min.css','css') ?>" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src=" <?php echo import::skin('bootstrap.min.js','js')?>" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<title><?=$title?></title>
+<body>
+<?php
+include 'header.phtml';
+?>
+
+<div class="container" style="width: 100%">
+<div class="sidebar-r right col-sm-3">
+
+</div>
+    <div class="col-sm-6">
+        <?php
+        include $content
+        ?>
+    </div>
+
+    <div class="sidebar-l left col-sm-3">
+
+    </div>
+</div>
+<?php
+include view::getTemplateView('base/footer');
+?>
+
+</body>
+</html>
+

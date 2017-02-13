@@ -1,0 +1,53 @@
+<?php
+
+import::lib('csrf');
+import::lib('url');
+?>
+<form method="post" action="<?=url::currentUrl()?>">
+    <table>
+        <tr>
+            <td>
+                <label>Username</label>
+            </td>
+            <td>
+                <input type="text" name="username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Email</label>
+            </td>
+            <td>
+                <input type="text" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password</label>
+            </td>
+            <td>
+                <input type="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>rePassword</label>
+            </td>
+            <td>
+                <input type="password" name="repassword">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label></label>
+            </td>
+            <td>
+                <input type="submit" value="Signup">
+              <a href="<?=url::createUrl('user/login')?>">
+                  <input type="button"  value="login">
+              </a>
+                <input type="hidden" name="csrf" value="<?=csrf::create()?>">
+            </td>
+        </tr>
+    </table>
+</form>

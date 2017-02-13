@@ -1,0 +1,43 @@
+<?php
+
+import::lib('url');
+import::lib('view');
+import::lib('debug');
+?>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="<?php echo import::skin('bootstrap.min.css','css')?>" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo import::skin('home.css','css')?>">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="<?php echo  import::skin('bootstrap-theme.min.css','css') ?>" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src=" <?php echo import::skin('bootstrap.min.js','js')?>" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<title><?=$title?></title>
+<?php
+include view::getTemplateView('base/header');
+?>
+
+<div class="container" style="width: 100%">
+    <?php
+    debug::display();
+    ?>
+
+    <div class="col-sm-12">
+        <?php
+        include $content
+        ?>
+    </div>
+
+
+</div>
+<?php
+include view::getTemplateView('base/footer');
+?>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+*{
+    direction: rtl;
+}
+#login-form
+{
+    margin-left: 30%;
+    margin-top: 10%;
+    border-radius:5px;
+    border: 1px solid #cccccc;
+    padding: 25px;
+    background-color: #ededed;
+}
+#login-form h3{
+    text-align: center;
+    width: 100%;
+    color: #3d88d6;
+    padding-bottom: 15px;
+}
+#login-form label
+{
+
+}
