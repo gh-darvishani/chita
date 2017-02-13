@@ -28,6 +28,9 @@ abstract class controller{
                     Throw new Exception(("csrf code is invalid"), 500);
 
                 }
+
+
+
             }
         }
 
