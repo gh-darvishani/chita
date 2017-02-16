@@ -136,7 +136,7 @@ class html extends plugin {
         return $m;
     }
     public function ckEditor($textId){
-        $jsFile=import::fileWithUrl('/lib/plugin/form/editor/ckeditor.js');
+        $jsFile=import::fileWithUrl('/lib/plugin/html/editor/ckeditor.js');
         $mm= '<script src="'.$jsFile.'"></script> <script data-sample="1">
 				CKEDITOR.replace("'.$textId.'", {
 					 toolbar : \'full\',
