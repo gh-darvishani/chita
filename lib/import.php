@@ -1,6 +1,6 @@
 <?php
-import::lib('validate');
-import::lib('debug');
+namespace lib;
+use lib\debug;
 class import{
             public static function lib($class){
                 include_once base_url.'/lib/'.$class.".php";
@@ -44,15 +44,15 @@ class import{
 
 
         public static function controller($class){
+
                  require base_url.DS.extra_url.'controller'.DS.$class."Controller.php";
         }
-        //public static function view($class){
-        //         require base_url.'/controller/'.$class.".php";
-        //}
+
         public static function template($layout,array $params,array $globalParams=null){
                     extract($params);
                     extract($globalParams);
-                 require base_url.DS.extra_url."view".DS."template".DS.$layout.DS."main.phtml";
+
+                  require base_url.DS.extra_url."view".DS."template".DS.$layout.DS."main.phtml";
         }
         public static function fileWithUrl($file){
             return home_url.$file;

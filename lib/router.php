@@ -1,6 +1,9 @@
 <?php
-
-class router{
+namespace lib;
+use lib\debug;
+use lib\import;
+use lib\validate;
+ class router{
 
     public function __construct($mode)
     {
@@ -46,10 +49,13 @@ class router{
         {
             debug::e("Controller: ".$controllerId." not found");
         }
-        import::controller($controllerId);
 
-        $cnt=$controllerId."Controller";
-        $controller=new  $cnt();
+        //require base_url.DS.extra_url.'controller'.DS.$class."Controller.php";
+      //   import::controller($controllerId);
+
+
+        $cnt=str_replace('/','\\',extra_url."controller\\".$controllerId."Controller");
+         $controller=new  $cnt();
         !validate::methodExists($controller,$action)?debug::e($action." not found"):true ;
 
         $controller->$action($params);

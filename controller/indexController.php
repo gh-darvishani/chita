@@ -1,4 +1,8 @@
 <?php
+namespace controller;
+
+use lib\controller;
+use lib\view;
 
 /**
  * Created by PhpStorm.
@@ -6,9 +10,7 @@
  * Date: 2/1/17
  * Time: 12:27 PM
  */
-import::lib('controller');
-import::lib('view');
-import::model('user');
+
 class indexController extends controller
 {
 

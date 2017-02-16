@@ -1,8 +1,9 @@
 <?php
+namespace lib\plugin\html;
+use lib\import;
+use lib\plugin\plugin;
+use lib\csrf;
 
-import::lib('plugin/plugin');
-//import::lib('csrf');
-// import::lang('grid',lang);
 
 class html extends plugin {
 

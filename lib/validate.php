@@ -1,5 +1,5 @@
 <?php
-
+namespace  lib;
 class validate{
 
 
@@ -11,7 +11,7 @@ class validate{
     public static function viewExists($fileDir,$controllerId='main')
     {
 
-    return file_exists(base_url.DS.extra_url."view".DS.$controllerId.DS.$fileDir.".phtml");
+     return file_exists(base_url.DS.extra_url."view".DS.$controllerId.DS.$fileDir.".phtml");
 
     }
     public static function methodExists($class,$method)

@@ -1,7 +1,8 @@
 <?php
+namespace backend\model;
+use lib\baseModel;
 
- import::lib('model');
-class cat extends model
+ class cat extends baseModel
 {
     static $table_name="cat";
     public static function getArray(){

@@ -1,23 +1,27 @@
 <?php
 
-import::plugin('html','form');
+
+use lib\app;
+use lib\plugin\html\html;
 
 $form=new html();
+echo $form->startForm(app::url()->currentUrl());
 echo $form->startTag("div",['style'=>'width:60%;margin:auto']);
+
 echo $form->addEmptyTag("hr");
 echo $form->addInput('text','title','',['placeholder'=>'title','class'=>'form form-control']);
 echo $form->addSelectList('cat',$cat);
-echo $form->addTextarea('editor',5,10,'',['id'=>'eee']);
+echo $form->addTextarea('body',5,10,'',['id'=>'eee']);
 
 
 
-echo $form->addInput("text",'title','',['class'=>'form form-control','placeholder'=>'title']);
 
 
 echo $form->addInput('text','tag','',['placeholder'=>'tag(/)','class'=>'form form-control']);
 
-
+echo $form->addInput('hidden','csrf',app::csrf()->create());
 echo $form->addInput('submit','','create',['class'=>'btn btn-success']);
 echo $form->ckEditor('eee');
 echo $form->addA(app::url()->createUrl('post/index'),'back');
+echo $form->endForm();
 ?>

@@ -1,5 +1,6 @@
 <?php
 
+namespace lib;
 class url{
             public static function createUrl($router,array $params=null){
                 $url_params="";

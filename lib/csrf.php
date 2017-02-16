@@ -1,6 +1,6 @@
 <?php
 
-
+namespace lib;
 import::lib('url');
 
 class csrf

@@ -1,7 +1,10 @@
 <?php
 
-import::lib('controller');
-import::lib('view');
+namespace backend\controller;
+
+use lib\controller;
+use lib\view;
+
 class mainController extends controller{
 
 

@@ -1,4 +1,5 @@
 <?php
+namespace lib;
 
 import::lib('view');
 import::lib('url');

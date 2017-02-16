@@ -1,9 +1,10 @@
 <?php
+namespace lib\plugin\grid;
+use lib\import;
+use lib\plugin\plugin;
+use lib\url;
 
-import::lib('plugin/plugin');
-import::lib('url');
-import::lang('grid',lang);
-class grid extends plugin{
+ class grid extends plugin{
 
 
     private $pageSize;
@@ -21,7 +22,7 @@ class grid extends plugin{
         $this->controller_id=$calledBy;
     }
     public function setModel($model){
-        import::model($model);
+     //   import::model($model);
 
         $this->model=$model;
         return $this;

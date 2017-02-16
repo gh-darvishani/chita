@@ -5,6 +5,7 @@
  * Date: 2/1/17
  * Time: 1:10 PM
  */
+namespace lib;
 class debug{
 
 

@@ -1,7 +1,8 @@
 <?php
 
- import::lib('model');
-class post extends model
+namespace backend\model;
+use lib\baseModel;
+ class post extends baseModel
 {
     static $table_name="post";
 }
