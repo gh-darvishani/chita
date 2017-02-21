@@ -1,8 +1,10 @@
 <?php
 
-import::lib('url');
-import::lib('view');
-import::lib('debug');
+use lib\debug;
+use lib\import;
+use lib\view;
+use lib\url;
+
 ?>
 <html>
 <head>
@@ -29,7 +31,7 @@ include view::getTemplateView('base/header');
 
     <div class="col-sm-12">
         <?php
-        include $content
+        include_once $content
         ?>
     </div>
 

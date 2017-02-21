@@ -1,6 +1,7 @@
 <?php
 
-namespace ptejada\uFlex;
+namespace lib\plugin\auth\src;
+
 
 /**
  * An object oriented representation an associative array

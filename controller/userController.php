@@ -1,9 +1,15 @@
 <?php
+namespace controller;
 
-import::lib('controller');
-import::lib('view');
-import::plugin('auth','auth');
-class userController extends controller
+
+ use lib\controller;
+use lib\debug;
+ use lib\plugin\auth\auth;
+ use lib\view;
+ use Monolog\Handler\StreamHandler;
+ use Monolog\Logger;
+
+ class userController extends controller
 {
 
     private   $user;
@@ -18,6 +24,11 @@ class userController extends controller
 
      public function loginAction()
     {
+
+        $log = new  Logger('name');
+        $log->pushHandler(new  StreamHandler('app.log', Logger::WARNING));
+        $log->addWarning('Foo');
+
         if($this->user->isLogin()){
 
 

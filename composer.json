@@ -1,0 +1,27 @@
+{
+  "name": "chita",
+  "type": "framework",
+  "license": "MIT",
+  "description": "A framework ",
+
+  "homepage": "https://github.com/masiha68/chita/",
+  "authors": [
+    {
+      "name": "gh darvishani",
+      "email": "gh.darvishani@live.com",
+      "homepage": "http://gh.darvishani.ir"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "Composer\\Installers\\": "src/Composer/Installers" }
+  },
+
+  "require": {
+    "raveren/kint": "^1.0",
+    "monolog/monolog": "1.0.*"
+  },
+  "require-dev": {
+
+  }
+
+}

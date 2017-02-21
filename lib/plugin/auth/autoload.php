@@ -7,6 +7,16 @@
  *
  * @return void
  */
+require_once 'src/User.php';
+require_once 'src/UserBase.php';
+require_once 'src/Collection.php';
+require_once 'src/Cookie.php';
+require_once 'src/DB.php';
+require_once 'src/DB_Table.php';
+require_once 'src/Hash.php';
+require_once 'src/LinkedCollection.php';
+require_once 'src/Log.php';
+require_once 'src/Session.php';
 spl_autoload_register(
     function ($class){
 

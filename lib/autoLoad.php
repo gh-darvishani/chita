@@ -1,9 +1,16 @@
 <?php
 
+
 function __autoload($class)
 {
 
-    echo $class."<br>";
+
     $parts = explode('\\', $class);
-    require  base_url.DS.str_replace('\\','/',$class) . '.php';
+    $file=base_url.DS.str_replace('\\','/',$class) . '.php';
+    if(file_exists($file)){
+        require  base_url.DS.str_replace('\\','/',$class) . '.php';
+    }else {
+        include_once base_url.DS.'vendor/autoload.php';
+    }
 }
+

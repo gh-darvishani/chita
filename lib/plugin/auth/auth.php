@@ -1,16 +1,22 @@
 <?php
+namespace lib\plugin\auth;
 
-import::lib('plugin/plugin');
-import::plugin('autoload','auth');
-import::lib('debug');
-import::lib('model');
+use lib\debug;
+use lib\plugin\auth\src\User;
+use lib\plugin\plugin;
+
+
+
+
+
 class auth extends plugin{
 
      public function init()
     {
 
 
-        $user = new ptejada\uFlex\User();
+
+        $user = new  User();
 
         // Add database credentials
         $user->config->database->host = dbhost;

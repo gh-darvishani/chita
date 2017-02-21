@@ -1,6 +1,6 @@
 <?php
-import::lib('csrf');
-import::lib('url');
+use lib\csrf;
+use lib\url;
 ?>
 <div class="col-sm-6" id="login-form">
     <h3>Login to Chita framework</h3>
@@ -12,7 +12,9 @@ import::lib('url');
         <input  class="form form-control" type="password" name="password">
         <br>
         <input class="btn btn-info" type="submit" value="login">
-        <a href="<?=url::createUrl('user/signup')?>">
+        <a href="<?=
+
+        url::createUrl('user/signup')?>">
             <input class="btn btn-success" type="button" value="signup">
         </a>
         <input type="hidden" name="csrf" value="<?=csrf::create()?>">

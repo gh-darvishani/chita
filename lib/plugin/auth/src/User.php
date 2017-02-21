@@ -1,8 +1,8 @@
 <?php
 
-namespace ptejada\uFlex;
+namespace lib\plugin\auth\src;
 
-/**
+ /**
  * All in one user object use to authenticating, registering new users and other user actions
  * Note: Either start() or login() must be called at least once on your code per User instance
  *

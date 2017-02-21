@@ -6,8 +6,11 @@
  * Time: 9:03 PM
  */
 
-import::lib('view');
-import::lib('controller');
+namespace controller;
+
+
+use lib\controller;
+use lib\view;
 
 class mainController extends controller
 {

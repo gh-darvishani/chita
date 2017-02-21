@@ -1,6 +1,6 @@
 <?php
 
-namespace ptejada\uFlex;
+namespace lib\plugin\auth\src;
 
 /**
  * Class to handle the PHP session

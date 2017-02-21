@@ -1,6 +1,7 @@
 <?php
 
 namespace lib\plugin;
+
 abstract class plugin
 {
     public $plugin_name;
